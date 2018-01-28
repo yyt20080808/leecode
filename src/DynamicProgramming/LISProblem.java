@@ -10,18 +10,14 @@ public class LISProblem {
         // 全部赋值为0
         for (int i = 0; i < v.length; i++)
             f[i] = 1;
-
+        int max = 0;
         for (int i = 1; i < v.length; i++) {
             for (int j = 0; j < i; j++) {
                 if (v[i] > v[j]) {
                     f[i] = Math.max( f[j] + 1, f[i] );
                 }
             }
-        }
-        int max = 0;
-        // 找到最大的那个结果作为返回值
-        for (int i = 0; i < v.length; i++) {
-            System.out.print(f[i]+" ");
+            // 找到最大的那个结果作为返回值
             if (f[i] > max)
                 max = f[i];
         }
