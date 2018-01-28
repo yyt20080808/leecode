@@ -49,7 +49,7 @@ public class BestTimetoBuyandSellStockwithCooldown {
             // buy[i] 表示 在第i天所处的状态是准备卖的状态
             buy[i] = Math.max(rest[i-1] - prices[i],buy[i-1]);
             // sell[i] 表示 在第i天 是刚刚卖的状态
-            sell[i] = Math.max( buy[i-1]+prices[i],rest[i-1] );
+            sell[i] = Math.max( buy[i-1]+prices[i],sell[i-1] );
             rest[i] = Math.max( sell[i-1],rest[i-1]);
             // 其实可以优化，sell[i] 可以代表rest[i-1]
             // buy = max(prebuy ,pre_sell - prices[i])
@@ -59,7 +59,7 @@ public class BestTimetoBuyandSellStockwithCooldown {
         return sell[N-1];
     }
     public static void main(String[] args) {
-        int [] nums = {1, 2};
+        int [] nums = {1, 2,3,0,2};
         BestTimetoBuyandSellStockwithCooldown b = new BestTimetoBuyandSellStockwithCooldown();
         b.maxProfit( nums );
     }
