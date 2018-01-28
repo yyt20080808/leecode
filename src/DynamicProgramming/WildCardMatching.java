@@ -31,13 +31,13 @@ public class WildCardMatching {
                     continue;
                 }
 
-                // if P is empty, s is not empty, it is false.
+                // if PalindromeLinkedList is empty, s is not empty, it is false.
                 if (j == 0) {
                     D[i][j] = false;
                     continue;
                 }
 
-                // if S is empty, P is not empty
+                // if S is empty, PalindromeLinkedList is not empty
                 if (i == 0) {
                     D[i][j] = D[i][j - 1] && p.charAt(j - 1) == '*';
                 } else {
