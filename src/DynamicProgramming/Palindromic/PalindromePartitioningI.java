@@ -1,4 +1,4 @@
-package DFS;
+package DynamicProgramming.Palindromic;
 
 import java.util.ArrayList;
 import java.util.List;
