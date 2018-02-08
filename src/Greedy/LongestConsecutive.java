@@ -1,4 +1,4 @@
-package Tree;
+package Greedy;
 
 import java.util.HashMap;
 

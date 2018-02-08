@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.HouseRobber;
 
 /**
  * Created by yyt on 2018/1/23.
@@ -22,11 +22,12 @@ public class HouseRobber {
         int []dp = new int[N+1];
         dp[0] = 0;
         dp[1] = nums[0];
-        dp[2] =  nums[1];
-        for (int i = 3; i <= N; i++) {
-            dp[i] = Math.max( dp[i-2],dp[i-3] )+ nums[i-1];
+//        dp[2] =  nums[1];
+        for (int i = 2; i <= N; i++) {
+            // dp【i】是抢到第i-1个房子所获得的最大收益
+            dp[i] = Math.max( dp[i-1], dp[i-2]+nums[i-1] );
         }
-        return Math.max( dp[N-1],dp[N] );
+        return dp[N];
     }
 
         public static void main(String[] args) {
