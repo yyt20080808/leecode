@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.Palindromic;
 
 /**
  * Created by yyt on 2018/1/15.
