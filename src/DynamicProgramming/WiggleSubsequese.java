@@ -81,6 +81,6 @@ public class WiggleSubsequese {
         assert w.wiggleMaxLength( nums2) == 9;
         int[] nums3 = {1,4,2,10,9,3,7,5,8};
         assert w.wiggleMaxLength( nums3) == 8;
-        assert w.wiggleMaxLength( nums3 )==7;
+        assert w.wiggleMaxLength( nums3 ) == 7;
     }
 }
